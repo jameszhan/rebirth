@@ -20,7 +20,17 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-
+group:development,:testdo
+  gem'rspec-rails'
+  gem'factory_girl_rails'
+  gem'capybara'
+  gem'launchy'
+  gem'spork'
+  gem'autotest',              require:false
+  gem'autotest-rails-pure',   require:false
+  gem'autotest-fsevent',      require:false
+  gem'autotest-growl',        require:false
+end
 
 gem 'jquery-rails'
 
