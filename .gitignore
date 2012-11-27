@@ -26,6 +26,8 @@
 .sass-cache
 capybara-*.html
 .rspec
+.rakeTasks
+.generators
 
 /vendor/bundle
 /log/*
