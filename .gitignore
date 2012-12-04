@@ -12,14 +12,14 @@
 *.iws
 
 # Ignore bundler config
-/.bundle
+.bundle
 
 # Ignore the default SQLite database.
-/db/*.sqlite3
+db/*.sqlite3
 
 # Ignore all logfiles and tempfiles.
-/log/*.log
-/tmp
+log/*.log
+tmp
 
 
 *.rbc*.sassc
@@ -29,12 +29,12 @@ capybara-*.html
 .rakeTasks
 .generators
 
-/vendor/bundle
-/log/*
-/tmp/*
-/public/system/*
-/coverage/
-/spec/tmp/*
+vendor/bundle
+log/*
+tmp/*
+public/system/*
+coverage/
+spec/tmp/*
 
 **.orig
 
