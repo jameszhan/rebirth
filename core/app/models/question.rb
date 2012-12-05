@@ -16,7 +16,6 @@ class Question
   index :user_id => 1
   
   belongs_to :updated_by, :class_name => "User"
-
   belongs_to :last_target, :polymorphic => true
   
   

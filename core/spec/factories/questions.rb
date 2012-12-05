@@ -6,3 +6,4 @@ FactoryGirl.define do
     body "MyText"
   end
 end
+

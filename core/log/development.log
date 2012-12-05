@@ -92,3 +92,1511 @@ Served asset /jquery.js - 200 OK (3ms)
 
 Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-27 18:34:03 +0800
 Served asset /application.css - 200 OK (6ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-12-05 15:43:17 +0800
+Served asset /rails.png - 200 OK (22ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 15:43:21 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7581ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7381ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (33.7210ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7388ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7133ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7762ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6108ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7402ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6530ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7879ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6000ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9569ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5719ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7998ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8339ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8172ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7619ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7223ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5881ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8361ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7061ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8768ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.2762ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9619ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7262ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (34.9998ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8177ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8730ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6608ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8697ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6351ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8952ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7033ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8933ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7138ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8291ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6668ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0421ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6940ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9190ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7810ms)
+  Rendered questions/index.html.haml within layouts/application (5168.0ms)
+Completed 500 Internal Server Error in 5221ms
+
+ActionView::Template::Error (Could not connect to any secondary or primary nodes for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>):
+    8:     %th
+    9:     %th
+    10: 
+    11:   - @questions.each do |question|
+    12:     %tr
+    13:       %td= question.title
+    14:       %td= question.body
+  app/views/questions/index.html.haml:11:in `_app_views_questions_index_html_haml__2584413621789902843_70253917479760'
+  app/controllers/questions_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.6ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 15:45:00 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8199ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=questions selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.3660ms)
+  Rendered questions/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 206ms (Views: 205.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 15:45:00 +0800
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 15:45:00 +0800
+Served asset /questions.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 15:45:00 +0800
+Served asset /jquery_ujs.js - 200 OK (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 15:45:00 +0800
+Served asset /application.js - 200 OK (6ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 15:45:00 +0800
+Served asset /questions.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 15:45:00 +0800
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 15:45:00 +0800
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2012-12-05 15:45:02 +0800
+Processing by QuestionsController#new as HTML
+  Rendered questions/_form.html.haml (119.9ms)
+  Rendered questions/new.html.haml within layouts/application (156.1ms)
+Completed 200 OK in 200ms (Views: 199.1ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 15:46:56 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7789ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (81.8052ms)
+  Rendered questions/index.html.haml within layouts/application (241.8ms)
+Completed 200 OK in 287ms (Views: 286.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 15:46:57 +0800
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 15:46:57 +0800
+Served asset /scaffolds.css - 304 Not Modified (42ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 15:46:57 +0800
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 15:46:57 +0800
+Served asset /questions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 15:46:57 +0800
+Served asset /questions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 15:46:57 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 15:46:57 +0800
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/questions/5028cd5b98de5a4e0800003f" for 127.0.0.1 at 2012-12-05 15:48:23 +0800
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"5028cd5b98de5a4e0800003f"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8440ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={"_id"=>"5028cd5b98de5a4e0800003f"} flags=[:slave_ok] limit=0 skip=0 fields=nil (26.8478ms)
+Completed 500 Internal Server Error in 45ms
+
+Mongoid::Errors::DocumentNotFound (
+Problem:
+  Document(s) not found for class Question with id(s) 5028cd5b98de5a4e0800003f.
+Summary:
+  When calling Question.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 5028cd5b98de5a4e0800003f ... (1 total) and the following ids were not found: 5028cd5b98de5a4e0800003f.
+Resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  app/controllers/questions_controller.rb:16:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.7ms)
+
+
+Started GET "/questions/502a27a698de5a0b0a0001e4" for 127.0.0.1 at 2012-12-05 15:49:18 +0800
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"502a27a698de5a0b0a0001e4"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6921ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={"_id"=>"502a27a698de5a0b0a0001e4"} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.2782ms)
+Completed 500 Internal Server Error in 3ms
+
+Mongoid::Errors::DocumentNotFound (
+Problem:
+  Document(s) not found for class Question with id(s) 502a27a698de5a0b0a0001e4.
+Summary:
+  When calling Question.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 502a27a698de5a0b0a0001e4 ... (1 total) and the following ids were not found: 502a27a698de5a0b0a0001e4.
+Resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  app/controllers/questions_controller.rb:16:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.9ms)
+
+
+Started GET "/questions/5028cd5b98de5a4e0800003f" for 127.0.0.1 at 2012-12-05 15:51:44 +0800
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"5028cd5b98de5a4e0800003f"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7250ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={"_id"=>"5028cd5b98de5a4e0800003f"} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.3090ms)
+Completed 500 Internal Server Error in 4ms
+
+Mongoid::Errors::DocumentNotFound (
+Problem:
+  Document(s) not found for class Question with id(s) 5028cd5b98de5a4e0800003f.
+Summary:
+  When calling Question.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 5028cd5b98de5a4e0800003f ... (1 total) and the following ids were not found: 5028cd5b98de5a4e0800003f.
+Resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  app/controllers/questions_controller.rb:16:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.4ms)
+
+
+Started GET "/questions/5028cd5b98de5a4e0800003f" for 127.0.0.1 at 2012-12-05 15:54:12 +0800
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"5028cd5b98de5a4e0800003f"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7071ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={"_id"=>"5028cd5b98de5a4e0800003f"} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.2339ms)
+Completed 500 Internal Server Error in 3ms
+
+Mongoid::Errors::DocumentNotFound (
+Problem:
+  Document(s) not found for class Question with id(s) 5028cd5b98de5a4e0800003f.
+Summary:
+  When calling Question.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 5028cd5b98de5a4e0800003f ... (1 total) and the following ids were not found: 5028cd5b98de5a4e0800003f.
+Resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  app/controllers/questions_controller.rb:16:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.6ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 16:16:53 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6840ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (50.0550ms)
+  Rendered questions/index.html.haml within layouts/application (166.0ms)
+Completed 500 Internal Server Error in 222ms
+
+ActionView::Template::Error (undefined method `ie_html' for #<#<Class:0x007fb295237310>:0x007fb295431878>):
+    1: !!! 5
+    2: -ie_html :class => 'no-js', :lang => I18n.locale do
+    3:   %head
+    4:     %title
+    5:       = yield :title
+  app/views/layouts/application.html.haml:2:in `_app_views_layouts_application_html_haml___185767725080952000_70202472518360'
+  app/controllers/questions_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.8ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 16:23:00 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8421ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (51.4348ms)
+  Rendered questions/index.html.haml within layouts/application (211.3ms)
+Completed 200 OK in 258ms (Views: 257.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 16:23:01 +0800
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 16:23:01 +0800
+Served asset /scaffolds.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 16:23:01 +0800
+Served asset /questions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 16:23:01 +0800
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 16:23:01 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 16:23:01 +0800
+Served asset /questions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 16:23:01 +0800
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 16:25:59 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7629ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (51.4810ms)
+  Rendered questions/index.html.haml within layouts/application (167.0ms)
+Completed 200 OK in 179ms (Views: 178.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 16:25:59 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 16:25:59 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 16:25:59 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 16:25:59 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 16:25:59 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 16:25:59 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 16:25:59 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 16:28:21 +0800
+Processing by QuestionsController#index as HTML
+  Rendered questions/index.html.haml within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `provider' for #<#<Class:0x007fa95d65f7f8>:0x007fa95fabb0e8>):
+    1: -provider(:title, "Question List")
+    2: 
+    3: %h1 Listing questions
+    4: 
+  app/views/questions/index.html.haml:1:in `_app_views_questions_index_html_haml__2098998573483647053_70182715640540'
+  app/controllers/questions_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.8ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 16:28:30 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7961ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (51.8510ms)
+  Rendered questions/index.html.haml within layouts/application (172.0ms)
+Completed 200 OK in 181ms (Views: 180.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 16:28:30 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 16:28:30 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 16:28:30 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 16:28:30 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 16:28:30 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 16:28:30 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 16:28:30 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 16:42:19 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7129ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (94.0130ms)
+  Rendered questions/index.html.haml within layouts/application (218.4ms)
+Completed 500 Internal Server Error in 223ms
+
+ActionView::Template::Error (undefined method `paginate' for #<#<Class:0x007fa95d65f7f8>:0x007fa9619de768>):
+    18:       %td= link_to 'Edit', edit_question_path(question)
+    19:       %td= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' }
+    20:       
+    21:   = paginate @questions
+    22: 
+    23: %br
+    24: 
+  app/views/questions/index.html.haml:21:in `_app_views_questions_index_html_haml__2098998573483647053_70182731967080'
+  app/controllers/questions_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.5ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 16:48:48 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7999ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (51.0800ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (89.5610ms)
+  Rendered questions/index.html.haml within layouts/application (309.1ms)
+Completed 500 Internal Server Error in 360ms
+
+ActionView::Template::Error (undefined method `current_page' for #<Array:0x007f9cef74ebc0>):
+    18:       %td= link_to 'Edit', edit_question_path(question)
+    19:       %td= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' }
+    20:       
+    21:   = paginate @questions
+    22: 
+    23: %br
+    24: 
+  app/views/questions/index.html.haml:21:in `_app_views_questions_index_html_haml__4229040758644459753_70156002274400'
+  app/controllers/questions_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.3ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 16:52:30 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6969ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (49.9840ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=0 skip=0 fields=nil (87.1859ms)
+  Rendered questions/index.html.haml within layouts/application (301.6ms)
+Completed 500 Internal Server Error in 352ms
+
+ActionView::Template::Error (undefined method `current_page' for #<Array:0x007fe2cd0f9580>):
+    18:       %td= link_to 'Edit', edit_question_path(question)
+    19:       %td= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' }
+    20:       
+    21:   = paginate @questions
+    22: 
+    23: %br
+    24: 
+  app/views/questions/index.html.haml:21:in `_app_views_questions_index_html_haml___729918099053969326_70306034588660'
+  app/controllers/questions_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 16:53:51 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9222ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (22.3680ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[3204216488462739603] (0.1190ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.3943ms)
+  Rendered questions/index.html.haml within layouts/application (179.0ms)
+Completed 200 OK in 298ms (Views: 296.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 16:53:52 +0800
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 16:53:52 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 16:53:52 +0800
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 16:53:52 +0800
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 16:53:52 +0800
+Served asset /questions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 16:53:52 +0800
+Served asset /questions.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 16:53:52 +0800
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/questions?page=2" for 127.0.0.1 at 2012-12-05 16:53:58 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"2"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7379ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=25 fields=nil (18.3139ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[2062204741953618618] (0.1190ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.3369ms)
+  Rendered questions/index.html.haml within layouts/application (103.1ms)
+Completed 200 OK in 149ms (Views: 147.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 16:53:58 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 16:53:58 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 16:53:58 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 16:53:58 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 16:53:58 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 16:53:58 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 16:53:58 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions?page=2" for 127.0.0.1 at 2012-12-05 16:55:01 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"2"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6652ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=25 fields=nil (17.9729ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[5597583711328958632] (0.1261ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.4270ms)
+  Rendered questions/index.html.haml within layouts/application (82.8ms)
+Completed 200 OK in 94ms (Views: 92.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 16:55:01 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 16:55:01 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 16:55:01 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 16:55:01 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 16:55:01 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 16:55:01 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 16:55:01 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions?page=2" for 127.0.0.1 at 2012-12-05 16:56:09 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"2"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6709ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=25 fields=nil (46.9172ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[4396957773037273448] (0.1299ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.4117ms)
+  Rendered questions/index.html.haml within layouts/application (110.3ms)
+Completed 200 OK in 121ms (Views: 120.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 16:56:09 +0800
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 16:56:09 +0800
+Served asset /questions.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 16:56:09 +0800
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 16:56:09 +0800
+Served asset /questions.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 16:56:09 +0800
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 16:56:09 +0800
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 16:56:09 +0800
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 16:58:24 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7048ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (21.5480ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[8150667049808007088] (0.1202ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.3510ms)
+  Rendered questions/index.html.haml within layouts/application (78.0ms)
+Completed 200 OK in 88ms (Views: 86.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 16:58:24 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 16:58:24 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 16:58:24 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 16:58:24 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 16:58:24 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 16:58:24 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 16:58:24 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 17:01:46 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8540ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (21.8728ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[7298460807166993853] (0.1211ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.3440ms)
+  Rendered questions/index.html.haml within layouts/application (77.9ms)
+Completed 500 Internal Server Error in 146ms
+
+ActionView::Template::Error (Invalid CSS after "  overflow": expected ";", was ": hidden"
+  (in /opt/workdir/rebirth/core/app/assets/stylesheets/application.css.scss)):
+    2: %html
+    3:   %head
+    4:     %title= yield :title
+    5:     = stylesheet_link_tag    "application", :media => "all" 
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:     
+  app/assets/stylesheets/application.css.scss:42
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml___2664923064002197407_70251362802160'
+  app/controllers/questions_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.6ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 17:02:06 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (23.8781ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[8008521800022291754] (0.1333ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.5360ms)
+  Rendered questions/index.html.haml within layouts/application (122.8ms)
+Completed 500 Internal Server Error in 143ms
+
+ActionView::Template::Error (Invalid CSS after "    +small-radius": expected "{", was ";"
+  (in /opt/workdir/rebirth/core/app/assets/stylesheets/application.css.scss)):
+    2: %html
+    3:   %head
+    4:     %title= yield :title
+    5:     = stylesheet_link_tag    "application", :media => "all" 
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:     
+  app/assets/stylesheets/application.css.scss:46
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml___2664923064002197407_70251362802160'
+  app/controllers/questions_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.6ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 17:02:56 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6311ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (21.6770ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[5902508006885406508] (0.1149ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.4671ms)
+  Rendered questions/index.html.haml within layouts/application (77.0ms)
+Completed 500 Internal Server Error in 95ms
+
+ActionView::Template::Error (Invalid CSS after "...lities/sprites"": expected selector or at-rule, was ".pagination{"
+  (in /opt/workdir/rebirth/core/app/assets/stylesheets/application.css.scss)):
+    2: %html
+    3:   %head
+    4:     %title= yield :title
+    5:     = stylesheet_link_tag    "application", :media => "all" 
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:     
+  app/assets/stylesheets/application.css.scss:40
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml___2664923064002197407_70251362802160'
+  app/controllers/questions_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.1ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 17:08:54 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8361ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (21.5762ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[8592382209746480959] (0.1211ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.3920ms)
+  Rendered questions/index.html.haml within layouts/application (111.7ms)
+Completed 500 Internal Server Error in 190ms
+
+ActionView::Template::Error (Invalid CSS after "...lities/sprites"": expected selector or at-rule, was ".pagination{"
+  (in /opt/workdir/rebirth/core/app/assets/stylesheets/application.css.scss)):
+    2: %html
+    3:   %head
+    4:     %title= yield :title
+    5:     = stylesheet_link_tag    "application", :media => "all" 
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:     
+  app/assets/stylesheets/application.css.scss:40
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml___1169946285897900090_70165975481220'
+  app/controllers/questions_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.8ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 17:09:23 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (21.7230ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[1490762826440220263] (0.1321ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.3588ms)
+  Rendered questions/index.html.haml within layouts/application (116.8ms)
+Completed 500 Internal Server Error in 137ms
+
+ActionView::Template::Error (Invalid CSS after "    +small-radius": expected "{", was ";"
+  (in /opt/workdir/rebirth/core/app/assets/stylesheets/application.css.scss)):
+    2: %html
+    3:   %head
+    4:     %title= yield :title
+    5:     = stylesheet_link_tag    "application", :media => "all" 
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:     
+  app/assets/stylesheets/application.css.scss:46
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml___1169946285897900090_70165975481220'
+  app/controllers/questions_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 17:09:33 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (21.5781ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[7781428939004823695] (0.1192ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.4370ms)
+  Rendered questions/index.html.haml within layouts/application (76.0ms)
+Completed 500 Internal Server Error in 96ms
+
+ActionView::Template::Error (Invalid CSS after "    +small-radius": expected "{", was "}    "
+  (in /opt/workdir/rebirth/core/app/assets/stylesheets/application.css.scss)):
+    2: %html
+    3:   %head
+    4:     %title= yield :title
+    5:     = stylesheet_link_tag    "application", :media => "all" 
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:     
+  app/assets/stylesheets/application.css.scss:47
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml___1169946285897900090_70165975481220'
+  app/controllers/questions_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.5ms)
+
+
+Started GET "/questions?page=2" for 127.0.0.1 at 2012-12-05 17:39:05 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"2"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6089ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=25 fields=nil (17.8699ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[2319618633269957176] (0.1228ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.4561ms)
+  Rendered questions/index.html.haml within layouts/application (78.9ms)
+Compiled application.css  (142ms)  (pid 2666)
+Completed 200 OK in 258ms (Views: 256.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 17:39:06 +0800
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 17:39:06 +0800
+Served asset /scaffolds.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 17:39:06 +0800
+Served asset /questions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 17:39:06 +0800
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 17:39:06 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 17:39:06 +0800
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 17:39:06 +0800
+Served asset /questions.js - 304 Not Modified (2ms)
+
+
+Started GET "/questions?page=2" for 127.0.0.1 at 2012-12-05 17:41:49 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"2"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6471ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=25 fields=nil (18.6927ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[5525519468684464463] (0.1168ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.4179ms)
+  Rendered questions/index.html.haml within layouts/application (79.3ms)
+Completed 500 Internal Server Error in 100ms
+
+ActionView::Template::Error (Invalid CSS after "    +small-radius": expected "{", was "}    "
+  (in /opt/workdir/rebirth/core/app/assets/stylesheets/application.css.scss)):
+    2: %html
+    3:   %head
+    4:     %title= yield :title
+    5:     = stylesheet_link_tag    "application", :media => "all" 
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:     
+  app/assets/stylesheets/application.css.scss:47
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml___1169946285897900090_70165975481220'
+  app/controllers/questions_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.2ms)
+
+
+Started GET "/questions?page=2" for 127.0.0.1 at 2012-12-05 17:42:52 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"2"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7010ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=25 fields=nil (17.6828ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[276933729185843529] (0.1521ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.3846ms)
+  Rendered questions/index.html.haml within layouts/application (119.6ms)
+Completed 500 Internal Server Error in 168ms
+
+ActionView::Template::Error (Undefined mixin 'small-radius'.
+  (in /opt/workdir/rebirth/core/app/assets/stylesheets/application.css.scss)):
+    2: %html
+    3:   %head
+    4:     %title= yield :title
+    5:     = stylesheet_link_tag    "application", :media => "all" 
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:     
+  app/assets/stylesheets/application.css.scss:46:in `small-radius'
+  app/assets/stylesheets/application.css.scss:46
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml___1169946285897900090_70165975481220'
+  app/controllers/questions_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.2ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 17:46:02 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6430ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (22.6984ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[1498930041763212611] (0.1230ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.3431ms)
+  Rendered questions/index.html.haml within layouts/application (80.9ms)
+Completed 500 Internal Server Error in 128ms
+
+ActionView::Template::Error (Undefined mixin 'border-radius'.
+  (in /opt/workdir/rebirth/core/app/assets/stylesheets/application.css.scss)):
+    2: %html
+    3:   %head
+    4:     %title= yield :title
+    5:     = stylesheet_link_tag    "application", :media => "all" 
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:     
+  app/assets/stylesheets/application.css.scss:46:in `border-radius'
+  app/assets/stylesheets/application.css.scss:46
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml___1169946285897900090_70165975481220'
+  app/controllers/questions_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (44.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (56.6ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 17:46:28 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (22.2070ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[5321979598432736392] (0.1240ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.3860ms)
+  Rendered questions/index.html.haml within layouts/application (76.1ms)
+Compiled application.css  (1949ms)  (pid 2666)
+Completed 200 OK in 2046ms (Views: 2045.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 17:46:30 +0800
+Served asset /application.css - 200 OK (16ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 17:46:30 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 17:46:30 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 17:46:30 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 17:46:30 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 17:46:30 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 17:46:30 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 17:46:49 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6998ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (21.5452ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[2520821598931772306] (0.1342ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.4830ms)
+  Rendered questions/index.html.haml within layouts/application (126.3ms)
+Compiled application.css  (927ms)  (pid 2666)
+Completed 200 OK in 1074ms (Views: 1072.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 17:46:50 +0800
+Served asset /application.css - 200 OK (9ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 17:46:50 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 17:46:50 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 17:46:50 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 17:46:50 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 17:46:50 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 17:46:50 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 17:47:24 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7391ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (51.8382ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[3592607301551681249] (0.1311ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.3269ms)
+  Rendered questions/index.html.haml within layouts/application (163.1ms)
+Compiled application.css  (932ms)  (pid 2666)
+Completed 200 OK in 1116ms (Views: 1114.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 17:47:25 +0800
+Served asset /application.css - 200 OK (17ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 17:47:25 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 17:47:25 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 17:47:25 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 17:47:25 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 17:47:25 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 17:47:25 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 17:48:33 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7341ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (77.2140ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[5028568482404859063] (0.1302ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.3521ms)
+  Rendered questions/index.html.haml within layouts/application (131.4ms)
+Compiled application.css  (925ms)  (pid 2666)
+Completed 200 OK in 1077ms (Views: 1075.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 17:48:34 +0800
+Served asset /application.css - 200 OK (69ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 17:48:35 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 17:48:35 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 17:48:35 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 17:48:35 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 17:48:35 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 17:48:35 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions?page=2" for 127.0.0.1 at 2012-12-05 17:48:46 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"2"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6590ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=25 fields=nil (17.8971ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[2485398568395320393] (0.1242ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.3920ms)
+  Rendered questions/index.html.haml within layouts/application (76.0ms)
+Completed 200 OK in 86ms (Views: 84.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 17:48:46 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 17:48:46 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 17:48:46 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 17:48:46 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 17:48:46 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 17:48:46 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 17:48:46 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions?page=2" for 127.0.0.1 at 2012-12-05 17:49:25 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"2"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7870ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=25 fields=nil (17.6311ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[134218043318879486] (0.1159ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.4320ms)
+  Rendered questions/index.html.haml within layouts/application (75.9ms)
+Compiled application.css  (983ms)  (pid 2666)
+Completed 200 OK in 1079ms (Views: 1077.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 17:49:26 +0800
+Served asset /application.css - 200 OK (6ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 17:49:26 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 17:49:26 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 17:49:26 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 17:49:26 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 17:49:26 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 17:49:26 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 17:49:30 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8078ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (21.2739ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[3128996449878563178] (0.1209ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.3498ms)
+  Rendered questions/index.html.haml within layouts/application (75.6ms)
+Completed 200 OK in 85ms (Views: 84.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 17:49:30 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 17:49:30 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 17:49:30 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 17:49:30 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 17:49:30 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 17:49:30 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 17:49:30 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions?page=3" for 127.0.0.1 at 2012-12-05 17:49:32 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"3"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9019ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=50 fields=nil (11.8842ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.3512ms)
+  Rendered questions/index.html.haml within layouts/application (67.1ms)
+Completed 200 OK in 78ms (Views: 76.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 17:49:32 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 17:49:32 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 17:49:32 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 17:49:32 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 17:49:32 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 17:49:32 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 17:49:32 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-05 17:49:35 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8790ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (21.4810ms)
+  MOPED: 127.0.0.1:27017 KILL_CURSORS cursor_ids=[2254714839840091476] (0.1218ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.3388ms)
+  Rendered questions/index.html.haml within layouts/application (76.0ms)
+Completed 200 OK in 86ms (Views: 84.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 17:49:35 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 17:49:35 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 17:49:35 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 17:49:35 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 17:49:35 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 17:49:35 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 17:49:35 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions?page=3" for 127.0.0.1 at 2012-12-05 17:57:19 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"3"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6452ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=50 fields=nil (11.8332ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.4029ms)
+  Rendered questions/index.html.haml within layouts/application (67.5ms)
+Compiled application.css  (980ms)  (pid 2666)
+Completed 200 OK in 1068ms (Views: 1067.1ms)
+
+
+Started GET "/questions?page=3" for 127.0.0.1 at 2012-12-05 17:57:20 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"3"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7420ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=50 fields=nil (13.2999ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.4570ms)
+  Rendered questions/index.html.haml within layouts/application (68.8ms)
+Completed 200 OK in 79ms (Views: 77.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 17:57:21 +0800
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 17:57:21 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 17:57:21 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 17:57:21 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 17:57:21 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 17:57:21 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 17:57:21 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions?page=3" for 127.0.0.1 at 2012-12-05 18:01:30 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"3"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6950ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=50 fields=nil (11.6632ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.4659ms)
+  Rendered questions/index.html.haml within layouts/application (78.0ms)
+Compiled application.css  (1001ms)  (pid 2666)
+Completed 200 OK in 1100ms (Views: 1098.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 18:01:31 +0800
+Served asset /application.css - 200 OK (11ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 18:01:31 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 18:01:31 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 18:01:31 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 18:01:31 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 18:01:31 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 18:01:31 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/503ddd6f98de5a15ee000012" for 127.0.0.1 at 2012-12-05 18:01:34 +0800
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"503ddd6f98de5a15ee000012"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6402ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={"_id"=>"503ddd6f98de5a15ee000012"} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.2067ms)
+Completed 500 Internal Server Error in 3ms
+
+Mongoid::Errors::DocumentNotFound (
+Problem:
+  Document(s) not found for class Question with id(s) 503ddd6f98de5a15ee000012.
+Summary:
+  When calling Question.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 503ddd6f98de5a15ee000012 ... (1 total) and the following ids were not found: 503ddd6f98de5a15ee000012.
+Resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  app/controllers/questions_controller.rb:16:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.4ms)
+
+
+Started GET "/questions?page=3" for 127.0.0.1 at 2012-12-05 18:02:32 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"3"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6981ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=50 fields=nil (11.8127ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.4559ms)
+  Rendered questions/index.html.haml within layouts/application (42.1ms)
+Completed 200 OK in 52ms (Views: 50.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 18:02:32 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 18:02:32 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 18:02:32 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 18:02:32 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 18:02:32 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 18:02:32 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 18:02:32 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions?page=3" for 127.0.0.1 at 2012-12-05 18:02:50 +0800
+Processing by QuestionsController#index as HTML
+  Parameters: {"page"=>"3"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7532ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={} flags=[:slave_ok] limit=25 skip=50 fields=nil (13.2790ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.4420ms)
+  Rendered questions/index.html.haml within layouts/application (43.8ms)
+Completed 200 OK in 54ms (Views: 52.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-05 18:02:50 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-05 18:02:50 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-05 18:02:50 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-05 18:02:50 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-05 18:02:50 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-05 18:02:50 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-05 18:02:50 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions/50408e1b98de5a2dc5000023" for 127.0.0.1 at 2012-12-05 18:03:12 +0800
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"50408e1b98de5a2dc5000023"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7350ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={"_id"=>"50408e1b98de5a2dc5000023"} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.1941ms)
+Completed 500 Internal Server Error in 3ms
+
+Mongoid::Errors::DocumentNotFound (
+Problem:
+  Document(s) not found for class Question with id(s) 50408e1b98de5a2dc5000023.
+Summary:
+  When calling Question.find with an id or array of ids, each parameter must match a document in the database or this error will be raised. The search was for the id(s): 50408e1b98de5a2dc5000023 ... (1 total) and the following ids were not found: 50408e1b98de5a2dc5000023.
+Resolution:
+  Search for an id that is in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error when searching for a single id, or only the matched documents when searching for multiples.):
+  app/controllers/questions_controller.rb:16:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.8ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7548ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (0.7432ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={"_id"=>"50408e1b98de5a2dc5000023"} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.3071ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={"_id"=>{:id=>"50408e1b98de5a2dc5000023"}} flags=[:slave_ok] limit=0 skip=0 fields=nil (0.4289ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={"$query"=>{"_id"=>"50408e1b98de5a2dc5000023"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (0.3610ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.4132ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=iask-production collection=questions selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (0.9189ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=iask-production collection=questions selector={"_id"=>"5084f45b98de5a34d800000a"} flags=[:remove_first] (0.1080ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=iask-production command={:count=>"questions", :query=>{}} (0.4771ms)

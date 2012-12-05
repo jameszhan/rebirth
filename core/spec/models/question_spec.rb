@@ -34,5 +34,6 @@ describe Question do
     @question.user = @user
     @question.save.should be_true
   end
-  
+
+
 end

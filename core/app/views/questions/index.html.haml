@@ -1,20 +1,12 @@
+-provide(:title, "Question List")
+
 %h1 Listing questions
 
-%table
-  %tr
-    %th Title
-    %th Body
-    %th
-    %th
-    %th
-
+%ul
   - @questions.each do |question|
-    %tr
-      %td= question.title
-      %td= question.body
-      %td= link_to 'Show', question
-      %td= link_to 'Edit', edit_question_path(question)
-      %td= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' }
+    %li= link_to question.title, question
+      
+= paginate @questions
 
 %br
 

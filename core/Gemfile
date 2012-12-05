@@ -5,7 +5,8 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem'mongoid'
+gem 'mongoid'
+gem 'kaminari' #this gem is use for paginate.
 
 
 # Gems used only for assets and not required
@@ -13,6 +14,7 @@ gem'mongoid'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'compass-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -27,10 +29,10 @@ group :development, :test do
   gem'capybara'
   gem'launchy'
   gem'spork'
-  gem'autotest',              require:false
-  gem'autotest-rails-pure',   require:false
-  gem'autotest-fsevent',      require:false
-  gem'autotest-growl',        require:false
+  gem'autotest',              require: false
+  gem'autotest-rails-pure',   require: false
+  gem'autotest-fsevent',      require: false
+  gem'autotest-growl',        require: false
 end
 
 gem 'haml-rails'

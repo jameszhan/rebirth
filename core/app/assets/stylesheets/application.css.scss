@@ -33,3 +33,29 @@ header nav ul li {
   background-color: #FCC;
   border: solid 1px #C66;
 }
+
+@import "compass";
+
+ul.horizontal{
+  @include horizontal-list();
+}
+
+.pagination{
+  text-align: center;
+  overflow: hidden;
+  padding: 20px;
+  span a {
+    color: #404040;
+    background-color: #E6E6E6;
+    padding: 7px 10px 7px 10px;
+    @include border-radius(3px);
+  }    
+  span.current {
+    background-color: #EE681F;
+    color: #FDF0E9;
+    padding: 7px 7px 7px 10px;
+    margin: 0 3px;
+    @include border-radius(3px);
+  }
+}
+  
