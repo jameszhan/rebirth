@@ -53,4 +53,13 @@ RSpec.configure do |config|
   config.before(:each) do
     DatabaseCleaner.clean
   end
+  
+  def stub_authentication(user = nil)
+    @user = user || FactoryGirl.create(:user)
+    Thread.current[:current_user] = @user
+    sign_in :user, @user
+    controller.stub!(:current_user).and_return(@user)
+    @user
+  end
+  
 end

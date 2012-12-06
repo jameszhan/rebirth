@@ -8,6 +8,12 @@ gem 'rails', '3.2.8'
 gem 'mongoid'
 gem 'kaminari' #this gem is use for paginate.
 
+gem 'devise'
+gem 'devise-encryptable'
+
+gem 'haml-rails'
+gem 'jquery-rails'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -33,10 +39,9 @@ group :development, :test do
   gem'autotest-rails-pure',   require: false
   gem'autotest-fsevent',      require: false
   gem'autotest-growl',        require: false
+  gem 'ffaker'
 end
 
-gem 'haml-rails'
-gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -53,5 +58,4 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-gem 'devise'
-gem 'devise-encryptable'
+

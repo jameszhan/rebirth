@@ -2,38 +2,38 @@ require 'spec_helper'
 
 describe Question do
   before :all do
-    @user = User.new
+    @user = FactoryGirl.build(:user)
   end
+  
   before :each do
-    @question = Question.new
+    @question = FactoryGirl.build(:question) #Question.new
   end
   
-  it "check question initialize properties" do
-    @question.title.should be_nil
-    @question.body.should be_nil
+  describe "validations" do
+    it "should have a title" do
+      @question.title = ""
+      @question.valid?.should == false
+    end
     
-    @question.user.should be_nil
-    @question.updated_by.should be_nil
-    @question.last_target.should be_nil
+    it "should have a body" do
+      @question.body = ""
+      @question.valid?.should == false
+    end
     
-    @question.answers_count.should be_zero
-    @question.views_count.should be_zero
-    @question.hotness.should be_zero
-    @question.flags_count.should be_zero
-
-    @question.accepted.should be_false
-    @question.closed.should be_false
+    it "should have a creator(user)" do
+      @question.user = nil
+      @question.valid?.should be_false
+    end    
+    
+    it "should be pass" do
+      @question.title.should_not be_empty 
+      @question.body.should_not be_empty
+      @question.user.should_not be_nil
+      
+      @question.valid?.should be_true
+    end
+    
   end
   
-  it "check require fields" do
-    @question.save.should be_false
-    @question.title = "Hello, Test Question."
-    @question.save.should be_false
-    @question.body = "Question Content."
-    @question.save.should be_false
-    @question.user = @user
-    @question.save.should be_true
-  end
-
 
 end

@@ -1,7 +1,16 @@
 Rebirth::Application.routes.draw do
   resources :questions
+   
+  devise_for :users, :path => "auth", :path_names => { 
+    :sign_in => 'login', 
+    :sign_out => 'logout', 
+    :password => 'secret', 
+    :confirmation => 'verification', 
+    :unlock => 'unblock', 
+    :registration => 'register', 
+    :sign_up => 'signup' 
+  }
 
-  devise_for :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
