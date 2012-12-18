@@ -3371,3 +3371,831 @@ Completed 200 OK in 50ms (Views: 36.5ms)
 
 Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-06 17:43:31 +0800
 Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-12-08 23:57:37 +0800
+Served asset /rails.png - 200 OK (68ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-08 23:57:53 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.8319ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.2094ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.6350ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.5288ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.8441ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (39.3500ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6880ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (4.2381ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.6139ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8942ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7290ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.0253ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.6987ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.9099ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.4960ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (4.8559ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.8741ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.3839ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.8880ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (4.0460ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.2649ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.4581ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6561ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.9239ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.9309ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.8583ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.0990ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.5310ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (39.3212ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (4.5679ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.4602ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.8470ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.5742ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (4.3709ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.7301ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (4.0419ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.3500ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.9928ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.0210ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.6617ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7250ms)
+  Rendered questions/index.html.haml within layouts/application (5237.8ms)
+Completed 500 Internal Server Error in 5289ms
+
+ActionView::Template::Error (Could not connect to any secondary or primary nodes for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>):
+    3: %h1 Listing questions
+    4: 
+    5: %ul
+    6:   - @questions.each do |question|
+    7:     %li= link_to question.title, question
+    8:       
+    9: = paginate @questions
+  app/views/questions/index.html.haml:6:in `_app_views_questions_index_html_haml___2961997204659665373_70274174216300'
+  app/controllers/questions_controller.rb:10:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.8ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-08 23:58:56 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8330ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (38.6703ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rebirth_development command={:count=>"questions", :query=>{}} (15.0030ms)
+  Rendered questions/index.html.haml within layouts/application (104.0ms)
+Completed 200 OK in 237ms (Views: 236.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-08 23:58:56 +0800
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-08 23:58:56 +0800
+Served asset /questions.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-08 23:58:56 +0800
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-08 23:58:56 +0800
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-08 23:58:56 +0800
+Served asset /jquery.js - 200 OK (5ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-08 23:58:56 +0800
+Served asset /questions.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-08 23:58:56 +0800
+Served asset /application.js - 200 OK (6ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-08 23:59:22 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (36.4201ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (0.3300ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rebirth_development command={:count=>"questions", :query=>{}} (0.4411ms)
+  Rendered questions/index.html.haml within layouts/application (41.1ms)
+Completed 200 OK in 50ms (Views: 48.9ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-08 23:59:22 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-08 23:59:22 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-08 23:59:22 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-08 23:59:22 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-08 23:59:22 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-08 23:59:22 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-08 23:59:22 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-10 16:27:33 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8277ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9751ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6367ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.2731ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7529ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8377ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7049ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9398ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6401ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7273ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5941ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8609ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8003ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9059ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8613ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7431ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5769ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8919ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (35.2049ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0401ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6949ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7791ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7920ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8420ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7090ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8902ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7128ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7958ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6551ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8322ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8661ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9171ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7793ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9660ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0609ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.1372ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0530ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9350ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7231ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0428ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8241ms)
+  Rendered questions/index.html.haml within layouts/application (5135.5ms)
+Completed 500 Internal Server Error in 5235ms
+
+ActionView::Template::Error (Could not connect to any secondary or primary nodes for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>):
+    3: %h1 Listing questions
+    4: 
+    5: %ul
+    6:   - @questions.each do |question|
+    7:     %li= link_to question.title, question
+    8:       
+    9: = paginate @questions
+  app/views/questions/index.html.haml:6:in `_app_views_questions_index_html_haml___3216680118516127460_70243809061900'
+  app/controllers/questions_controller.rb:16:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.3ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-10 16:28:49 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9079ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (62.2952ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rebirth_development command={:count=>"questions", :query=>{}} (17.6249ms)
+  Rendered questions/index.html.haml within layouts/application (120.0ms)
+Completed 200 OK in 296ms (Views: 291.5ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-10 16:28:49 +0800
+Served asset /questions.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-10 16:28:49 +0800
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-10 16:28:49 +0800
+Served asset /questions.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-10 16:28:49 +0800
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-10 16:28:49 +0800
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-10 16:28:49 +0800
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-10 16:28:49 +0800
+Served asset /application.js - 200 OK (44ms)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2012-12-10 16:48:09 +0800
+Processing by QuestionsController#new as HTML
+Completed 401 Unauthorized in 26ms
+
+
+Started GET "/auth/login" for 127.0.0.1 at 2012-12-10 16:48:09 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/devise-2.1.2/app/views/devise/shared/_links.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p327/gems/devise-2.1.2/app/views/devise/sessions/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 23ms (Views: 21.8ms)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2012-12-10 16:48:11 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YVc3Vhn6XoTpcpnacgTEqRQ8kR4nvYhWcga1ceY+230=", "user"=>{"email"=>"zhiqiangzhan@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6061ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=users selector={"$query"=>{"email"=>"zhiqiangzhan@gmail.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (43.8809ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=rebirth_development collection=users selector={"_id"=>"50c03b96c3666e78dc000001"} update={"$set"=>{"current_sign_in_at"=>2012-12-10 08:48:12 UTC, "sign_in_count"=>2}} flags=[] (0.1960ms)
+Redirected to http://localhost:3000/questions/new
+Completed 302 Found in 440ms
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2012-12-10 16:48:12 +0800
+Processing by QuestionsController#new as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=users selector={"$query"=>{"_id"=>"50c03b96c3666e78dc000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (0.5169ms)
+  Rendered questions/_form.html.haml (8.4ms)
+  Rendered questions/new.html.haml within layouts/application (33.0ms)
+Completed 200 OK in 68ms (Views: 66.3ms)
+
+
+Started GET "/questions/new" for 127.0.0.1 at 2012-12-10 16:48:56 +0800
+Processing by QuestionsController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7379ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=users selector={"$query"=>{"_id"=>"50c03b96c3666e78dc000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (0.3417ms)
+  Rendered questions/_form.html.haml (25.6ms)
+  Rendered questions/new.html.haml within layouts/application (67.0ms)
+Completed 200 OK in 133ms (Views: 115.1ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5311ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5900ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2701ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6339ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2910ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3361ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2507ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2572ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2410ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3051ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1950ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2243ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1110ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6971ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.6832ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2438ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3719ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2443ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3978ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3292ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1358ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3361ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1401ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3797ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (76.5791ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2429ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2631ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2789ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1358ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4200ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1182ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3208ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3170ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3373ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1179ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4009ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2050ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3940ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2820ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2739ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1492ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1909ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2858ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1139ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2248ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1342ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1530ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0481ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2658ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0250ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2317ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0719ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3101ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1499ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2879ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1230ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3566ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1239ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2453ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2081ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5092ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1282ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2999ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1041ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3080ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0917ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3168ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0989ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2279ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1871ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3523ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (48.0208ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7941ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1289ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8601ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6851ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5671ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1909ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2949ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1330ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5371ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3208ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9942ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=questions selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (87.4240ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=questions selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 fields=nil (0.4461ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-12 16:46:22 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0240ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (34.2321ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rebirth_development command={:count=>"questions", :query=>{}} (9.8131ms)
+  Rendered questions/index.html.haml within layouts/application (82.1ms)
+Completed 200 OK in 187143ms (Views: 187141.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-12 16:49:30 +0800
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-12 16:49:30 +0800
+Served asset /questions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-12 16:49:30 +0800
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-12 16:49:30 +0800
+Served asset /questions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-12 16:49:30 +0800
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-12 16:49:30 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-12 16:49:30 +0800
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-12 16:49:38 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5951ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (0.2878ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rebirth_development command={:count=>"questions", :query=>{}} (0.3700ms)
+  Rendered questions/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 231290ms (Views: 231289.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-12 16:53:30 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-12 16:53:30 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-12 16:53:30 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-12 16:53:30 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-12 16:53:30 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-12 16:53:30 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-12 16:53:30 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-12 16:54:50 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9649ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (0.3269ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rebirth_development command={:count=>"questions", :query=>{}} (0.3724ms)
+  Rendered questions/index.html.haml within layouts/application (79.5ms)
+Completed 200 OK in 877871ms (Views: 877869.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-12 17:09:28 +0800
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-12 17:09:28 +0800
+Served asset /questions.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-12 17:09:28 +0800
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-12 17:09:28 +0800
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-12 17:09:28 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-12 17:09:28 +0800
+Served asset /questions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-12 17:09:28 +0800
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-12 17:09:41 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0021ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (0.3681ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rebirth_development command={:count=>"questions", :query=>{}} (0.4439ms)
+  Rendered questions/index.html.haml within layouts/application (1890.2ms)
+Completed 200 OK in 431376ms (Views: 431374.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-12 17:16:53 +0800
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-12 17:16:53 +0800
+Served asset /questions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-12 17:16:53 +0800
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-12 17:16:53 +0800
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-12 17:16:53 +0800
+Served asset /questions.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-12 17:16:53 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-12 17:16:53 +0800
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-12 17:17:12 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8707ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (0.3829ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rebirth_development command={:count=>"questions", :query=>{}} (0.3867ms)
+  Rendered questions/index.html.haml within layouts/application (2179.7ms)
+Completed 200 OK in 409338ms (Views: 409336.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-12 17:24:01 +0800
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-12 17:24:01 +0800
+Served asset /questions.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-12 17:24:01 +0800
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-12 17:24:01 +0800
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-12 17:24:01 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-12 17:24:01 +0800
+Served asset /questions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-12 17:24:01 +0800
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-12 17:24:07 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6909ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (0.2971ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rebirth_development command={:count=>"questions", :query=>{}} (0.2952ms)
+  Rendered questions/index.html.haml within layouts/application (3299.2ms)
+Completed 200 OK in 145017ms (Views: 145015.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-12 17:26:32 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-12 17:26:32 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-12 17:26:32 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-12 17:26:32 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-12 17:26:32 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-12 17:26:32 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-12 17:26:32 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-12 17:37:46 +0800
+Processing by QuestionsController#index as HTML
+Completed 500 Internal Server Error in 22262ms
+
+SystemExit (exit):
+  app/controllers/questions_controller.rb:10:in `index'
+
+
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-12 17:38:54 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7429ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (0.4077ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rebirth_development command={:count=>"questions", :query=>{}} (0.3650ms)
+  Rendered questions/index.html.haml within layouts/application (3488.1ms)
+Completed 200 OK in 86303ms (Views: 86301.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-12 17:40:20 +0800
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-12 17:40:20 +0800
+Served asset /questions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-12 17:40:20 +0800
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-12 17:40:20 +0800
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-12 17:40:20 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-12 17:40:20 +0800
+Served asset /questions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-12 17:40:20 +0800
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-12 17:40:26 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8259ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (0.3960ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rebirth_development command={:count=>"questions", :query=>{}} (0.3502ms)
+  Rendered questions/index.html.haml within layouts/application (5271.0ms)
+Completed 200 OK in 43219ms (Views: 43218.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-12 17:41:09 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-12 17:41:09 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-12 17:41:09 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-12 17:41:09 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-12 17:41:09 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-12 17:41:09 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-12 17:41:09 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-12 17:41:28 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7408ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (0.2811ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rebirth_development command={:count=>"questions", :query=>{}} (0.2570ms)
+  Rendered questions/index.html.haml within layouts/application (1039.8ms)
+Completed 200 OK in 7023ms (Views: 7022.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-12 17:41:35 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-12 17:41:35 +0800
+Served asset /questions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-12 17:41:35 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-12 17:41:35 +0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-12 17:41:35 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-12 17:41:36 +0800
+Served asset /questions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-12 17:41:36 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-12 17:41:49 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (27.8728ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (0.4003ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rebirth_development command={:count=>"questions", :query=>{}} (0.3943ms)
+  Rendered questions/index.html.haml within layouts/application (3669.0ms)
+Completed 200 OK in 3921949ms (Views: 3921947.5ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-12 18:47:33 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7792ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (0.2789ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rebirth_development command={:count=>"questions", :query=>{}} (0.3228ms)
+  Rendered questions/index.html.haml within layouts/application (18.0ms)
+Completed 200 OK in 662909ms (Views: 662907.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-12 18:58:36 +0800
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-12 18:58:36 +0800
+Served asset /questions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-12 18:58:36 +0800
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-12 18:58:36 +0800
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-12 18:58:36 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-12 18:58:36 +0800
+Served asset /questions.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-12 18:58:36 +0800
+Served asset /application.js - 304 Not Modified (55ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-12 18:59:22 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7560ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (0.3929ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rebirth_development command={:count=>"questions", :query=>{}} (0.4170ms)
+  Rendered questions/index.html.haml within layouts/application (18.4ms)
+Completed 200 OK in 473583ms (Views: 473581.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-12 19:07:15 +0800
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-12 19:07:15 +0800
+Served asset /questions.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-12 19:07:15 +0800
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-12 19:07:15 +0800
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-12 19:07:15 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-12 19:07:15 +0800
+Served asset /questions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-12 19:07:15 +0800
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2012-12-12 19:07:30 +0800
+Processing by QuestionsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8488ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rebirth_development collection=questions selector={} flags=[:slave_ok] limit=25 skip=0 fields=nil (0.3359ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rebirth_development command={:count=>"questions", :query=>{}} (0.3688ms)
+  Rendered questions/index.html.haml within layouts/application (17.9ms)
+Completed 200 OK in 69ms (Views: 67.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-12 19:07:30 +0800
+Served asset /application.css - 304 Not Modified (48ms)
+
+
+Started GET "/assets/questions.css?body=1" for 127.0.0.1 at 2012-12-12 19:07:30 +0800
+Served asset /questions.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-12 19:07:30 +0800
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-12 19:07:30 +0800
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-12 19:07:30 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2012-12-12 19:07:30 +0800
+Served asset /questions.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-12 19:07:30 +0800
+Served asset /application.js - 304 Not Modified (9ms)
